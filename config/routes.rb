@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'users/new'
+
   match '/administration', to: 'static_pages#administration',    via: 'get'
 
 
