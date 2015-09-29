@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
   end
 
   def manager
+  	@contact_messages = ContactForm.all
   end
 end

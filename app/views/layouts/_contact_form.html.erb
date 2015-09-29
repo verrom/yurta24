@@ -1,31 +1,30 @@
 <div class="all-banners-width">
 	<figure class="green-background">
-		<div class="container">
-			<div class="row">
-				<div class="center-block col-md-8 col-lg-12 title-1" style="float: none">	
-					Остались вопросы? Напишите нам!
-				</div>
-			</div>	
-		</div>
-		<div class="center-block col-lg-8" style="float: none">
-			<div class="form-group col-md-4 col-lg-4">
-				<label for="InputName"></label>
-				<input type="text" class="form-control" id="InputName" placeholder="Ваше имя">
-			</div>
-			<div class="form-group col-md-4 col-lg-4">
-				<label for="InputEmail"></label>
-				<input type="email" class="form-control" id="InputEmail" placeholder="Email">
-			</div>
-			<div class="form-group col-md-4 col-lg-4 paddings-2">
-				<label for="InputPhone"></label>
-				<input type="text" class="form-control" id="InputPhone" placeholder="Телефон">
-			</div>
-			<div class="form-group col-md-12 col-lg-12">
-				<textarea type="text" class="form-control" placeholder="Введите Ваше сообщение" rows="3"></textarea>		
-			</div>
-			<div class="row">
-				<button type="button" id="get-price" class="btn btn-success center-block button-contact-form">Написать нам</button>
-			</div>
-		</div>
+		<%= form_for @contact_form do |f| %>
+	  		<p>
+	   		 	<%= f.label :name %><br>
+	    		<%= f.text_field :name %>
+	  		</p>
+	 
+	  		<p>
+	    		<%= f.label :phone %><br>
+	    		<%= f.text_field :phone %>
+	  		</p>
+
+	  		<p>
+	   		 	<%= f.label :email %><br>
+	    		<%= f.text_field :email %>
+	  		</p>
+	 
+	  		<p>
+	    		<%= f.label :text %><br>
+	    		<%= f.text_field :text %>
+	  		</p>
+	 
+	  		<p>
+	    		<%= f.submit %>
+	  		</p>
+		<% end %>
 	</figure>
 </div>
+

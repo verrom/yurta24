@@ -1,1 +1,27 @@
-<h1>Административный раздел</h> <%= link_to "Sign out", signout_path, method: "delete" %>
+<h1>Административный раздел <%= link_to "Sign out", signout_path, method: "delete" %></h1>
+
+<h2>Contact messages</h2>
+<div>
+	<div>
+	  <% @contact_messages.each do |contact_form| %>
+	    <p>
+	      <strong>Name:</strong>
+	      <%= contact_form.name %>
+	    </p>
+
+	    <p>
+	      <strong>Phone:</strong>
+	      <%= contact_form.phone %>
+	    </p>
+	    <p>
+	      <strong>Email:</strong>
+	      <%= contact_form.email %>
+	    </p>
+
+	    <p>
+	      <strong>Text:</strong>
+	      <%= contact_form.text %>
+	    </p>
+	  <% end %>
+	</div>
+</div>

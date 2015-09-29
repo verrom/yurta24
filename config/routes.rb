@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :contact_forms, only: [:new, :create, :destroy]
   root 'static_pages#home'
+  match '/',        to: 'static_pages#home',       via: 'post'
   match '/manager', to: 'static_pages#manager',    via: 'get'
   match '/manager', to: 'sessions#create',         via: 'post'
   match '/signin',  to: 'sessions#new',            via: 'get'
   match '/signout', to: 'sessions#destroy',        via: 'delete'
+
+  
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
