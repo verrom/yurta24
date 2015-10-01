@@ -15,5 +15,6 @@
    </div>  
       <%= f.label "Комментарий" %><%= f.text_field :comment %>
       <%= f.label "Цена" %><%= f.text_field :price %>
+      <%= f.label :image %> <%= f.file_field :image %>
       <%= f.submit %>
 <% end %>
