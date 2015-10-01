@@ -11,15 +11,31 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150929044623) do
+ActiveRecord::Schema.define(version: 20151001063000) do
 
   create_table "contact_forms", force: :cascade do |t|
     t.string   "name"
     t.string   "phone"
     t.string   "email"
-    t.text     "text"
+    t.string   "text"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string   "variable1"
+    t.string   "variable2"
+    t.string   "variable3"
+    t.string   "variable4"
+    t.string   "value1"
+    t.string   "value2"
+    t.string   "value3"
+    t.string   "value4"
+    t.string   "comment"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "price"
+    t.string   "item_name"
   end
 
   create_table "users", force: :cascade do |t|

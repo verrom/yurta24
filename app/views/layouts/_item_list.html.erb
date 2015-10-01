@@ -1,3 +1,5 @@
+<h1>Items list</h1>
+
 <% @items.each do |item| %>
 	<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 paddings-2">
 		<div class="goods-container">
@@ -25,5 +27,9 @@
 				</div>
 			</div>	
 		</div>
+		<div class="col-lg-1">
+	                  <%= link_to "delete", item, method: :delete,
+	                                     data: { confirm: "You sure?" }%>
+	    </div>
 	</div>
 <% end %>

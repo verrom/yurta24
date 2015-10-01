@@ -1,0 +1,55 @@
+<h2>Contact messages (<%= @contact_messages.count %>)</h2>
+
+<div>
+		<div class = "container">
+			<div class = "row col-lg-12">
+				<div class="col-lg-2">
+				    <strong>Date, time</strong>
+				</div>
+		  		<div class="col-lg-2">
+				    <strong>Name</strong>
+				</div>
+				<div class="col-lg-1">
+				    <strong>Phone</strong>
+				</div>
+				<div class="col-lg-2">
+				    <strong>Email</strong>
+				</div>
+				<div class="col-lg-5">
+				    <strong>Text</strong>
+				</div>
+			</div>
+		</div>
+
+	  	<% @contact_messages.each do |contact_form| %>
+		  	<div class = "container">
+			    <div class = "row col-lg-12">
+			    	<div class="col-lg-2">
+						<span class="timestamp">
+	    					<%= contact_form.created_at %>
+	  					</span>
+	  				</div>
+				    <div class="col-lg-1">
+					    <%= contact_form.name %>
+					</div>
+				    
+				    <div class="col-lg-1">  
+				      	<%= contact_form.phone %>
+				    </div>
+
+				    <div class="col-lg-2">
+				      	<%= contact_form.email %>
+				    </div>
+
+				    <div class="col-lg-5">
+				      	<%= contact_form.text %>
+				    </div>
+
+				    <div class="col-lg-1">
+						<%= link_to "delete", contact_form, method: :delete,
+                                     data: { confirm: "You sure?" }%>
+					</div>
+			    </div>
+		    </div>   
+	   	<% end %>
+</div>
