@@ -5,8 +5,9 @@
 
 	<%= render 'layouts/green_line' %>
 
+
 	<div class="container">
-		<h2 class="center-block title-1 title-1-about-us " style="float: none" id: "#about_us">О нас</h2>
+		<h2 class="center-block title-1 title-1-about-us " style="float: none" id = "about_us">О нас</h2>
 		<div class="row">
 			<div class="center-block col-lg-10" style="float: none">
 				<div class="col-xs-12 col-sm-4">
@@ -37,6 +38,7 @@
 		</div>
 	</div>
 
+
 	<div class="container">
 		<div class="row">
 			<div class="center-block col-lg-10" style="float: none">
@@ -55,66 +57,7 @@
 		</div>
 	</div>
 
-	
-	<div class="all-banners-width hidden-xs">
-		<figure class="green-background">
-			<div class="container">
-					<div class="row">
-						<div class="center-block col-md-10 col-lg-10" style="float: none">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-8 col-lg-10 title-1">	
-										Почему наши юрты?
-									</div>
-								</div>	
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "time.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрта собирается за 3 часа
-								</div>
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "vlaga.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрты не пропускают влагу
-								</div>
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "guarantee.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Гарантия 1 год
-								</div>
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "natural.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрты изготовлены из натуральных материалов
-								</div>
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "hand-made.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									100% ручная работа
-								</div>
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "delivery.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Доставка по России и СНГ
-								</div>
-							</div>
-							<div class="col-7 why-yurta-block">
-								<%= image_tag "permeamble.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрты паропроницаемы
-								</div>
-							</div>
-						</div>
-					</div>
-			</div>
-		</figure>
-	</div>	
+	<%= render 'layouts/why_we_are' %>
 	
 	
 	<%= render 'layouts/green_line' %>
@@ -126,14 +69,14 @@
 		</div>
 	</div>
 
-	<div class="container">
+	<div class="container" id = "prices">
 		<div class="row">
 			<button type="button" id="get-price" class="btn btn-success center-block button-get-price">Получить прайс!</button>
 		</div>
 	</div>
 	
 
-	<div class="all-banners-width hidden-xs">
+	<div class="all-banners-width hidden-xs" id = "how_we_work">
 		<figure class="green-background">
 			<div class="container">
 					<div class="row">
@@ -182,7 +125,7 @@
 	</div>	
 	
 	<div class="container">
-		<h2 class="center-block title-1 title-1-about-us " style="float: none">Возможное применение</h2>
+		<h2 class="center-block title-1 title-1-about-us " style="float: none" id = "applying">Возможное применение</h2>
 
 		<div class="row">
 			<div class="center-block col-xs-12 col-sm-12 col-md-10 col-lg-10 margin-bottom-top" style="float: none">

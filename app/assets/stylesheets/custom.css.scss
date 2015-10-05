@@ -99,6 +99,7 @@ figure.green-background {
     display: block;
     background: url('header.png') 100% 100% no-repeat;
     height: 120px;
+    margin-top: 50px;
 }
 
 .goods-container {
@@ -292,4 +293,14 @@ body {
 
 .center-block {
 	text-align: center;
+}
+
+.navbar {
+	background: black;
+	text-align: center;
+	border: 0;
+}
+
+.navbar li {
+	font-size: 14pt;
 }
