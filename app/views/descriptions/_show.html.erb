@@ -1,0 +1,10 @@
+<div class = "container">
+  <div class = "row col-lg-12">
+    <h1>Возможное применение</h1>
+      <% @descriptions.each do |description| %>
+        <%= description.text %>
+        <%= link_to 'Изменить', edit_description_path(description) %>
+      <% end %>
+    </table>
+  </div>
+</div>
