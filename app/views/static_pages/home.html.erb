@@ -4,40 +4,7 @@
 	<%= render 'layouts/main_banner' %>
 
 	<%= render 'layouts/green_line' %>
-
-
-	<div class="container">
-		<h2 class="center-block title-1 title-1-about-us " style="float: none" id = "about_us">О нас</h2>
-		<div class="row">
-			<div class="center-block col-lg-10" style="float: none">
-				<div class="col-xs-12 col-sm-4">
-					<div class="embed-responsive embed-responsive-16by9 img-radius">
-						<div class="video">
-							<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/OKhnkzC4Y08?autoplay=0&loop=0&showinfo=0&theme=dark&color=red&controls=1&modestbranding=0&start=0&fs=1&iv_load_policy=1&wmode=transparent&rel=1" frameborder="0" allowfullscreen></iframe>
-						</div>
-					</div>
-				</div>
-			
-				<div class="col-xs-12 col-sm-8 col-md-8">
-					<p>Компания ЮРТЫ СИБИРИ является непосредственным производителем юрт, это позволяет 
-					контролировать процесс производства от начала и до конца. Все юрты изготавливаются из 
-					экологически чистых современных материалов по традиционным технологиям. Наша компания 
-					к юртам предлагает мебель и убранство в традиционном стиле. Так же мы можем взять на 
-					себя полный комплекс по установке юрты под «ключ». С помощью транспортных компаний может 
-					быть организована доставка в любой регион России. Иногда наши потенциальные клиенты 
-					привозят монгольские юрты сами, как правило, это значит: отсутствие гарантии, трудность 
-					поиска продавца при обнаружении дефектов, более высокая стоимость. Все эти трудности 
-					преодолеть предлагаем МЫ!
-					Иногда наши потенциальные клиенты привозят монгольские юрты сами, как правило, это 
-					значит: отсутствие гарантии, трудность поиска продавца при обнаружении дефектов, более 
-					высокая стоимость. Все эти трудности преодолеть предлагаем МЫ!
-					
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
+	<%= render 'layouts/about_us' %>
 
 	<div class="container">
 		<div class="row">
@@ -76,92 +43,10 @@
 	</div>
 	
 
-	<div class="all-banners-width hidden-xs" id = "how_we_work">
-		<figure class="green-background">
-			<div class="container">
-					<div class="row">
-						<div class="center-block col-md-10 col-lg-10" style="float: none">
-							<div class="container">
-								<div class="row">
-									<div class="col-md-8 col-lg-10 title-1">	
-										5 простых шагов покупки
-									</div>
-								</div>	
-							</div>
-							<div class="col-5 why-yurta-block">
-								<%= image_tag "round_picture_1.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрта собирается за 3 часа
-								</div>
-							</div>
-							<div class="col-5 why-yurta-block">
-								<%= image_tag "round_picture_1.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрты не пропускают влагу
-								</div>
-							</div>
-							<div class="col-5 why-yurta-block">
-								<%= image_tag "round_picture_1.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Гарантия 1 год
-								</div>
-							</div>
-							<div class="col-5 why-yurta-block">
-								<%= image_tag "round_picture_1.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									Юрты изготовлены из натуральных материалов
-								</div>
-							</div>
-							<div class="col-5 why-yurta-block">
-								<%= image_tag "round_picture_1.png", class: "img-responsive" %>
-								<div class="why-yurta-block-description">
-									100% ручная работа
-								</div>
-							</div>
-						</div>
-					</div>
-			</div>
-		</figure>
-	</div>	
 	
-	<div class="container">
-		<h2 class="center-block title-1 title-1-about-us " style="float: none" id = "applying">Возможное применение</h2>
-
-		<div class="row">
-			<div class="center-block col-xs-12 col-sm-12 col-md-10 col-lg-10 margin-bottom-top" style="float: none">
-				<div>
-					<p align="left">
-										<b>- Юрточный кемпинг</b> – может быть очень популярен и чрезвычайно востребован на 
-										туристическом рынке, особенно при современном развитии этнического и экологического 
-										туризма. Не секрет, что возведение турбаз из капитальных сооружений всегда было дорого,
-										а другой вариант - палатки- не дают требуемого комфорта. Именно юрта поможет решить 
-										проблему оптимального соотношения цены и качества отдыха. Кемпинги, где туристы живут в 
-										современных юртах - вот чего не хватает современной туриндустрии.</br>
-										<b>- Летняя перевалочная база.</b> Чем дальше от цивилизации, тем заманчивее отдых для 
-										уставших от городов туристов. Юрточный перевалочный лагерь - отличное решение для 
-										популярных туристских маршрутов. Компактность и легкость конструкций позволяет на 
-										небольших автомобилях перевезти несколько юрт и устанавливать там, где хочется. 
-										Оборудовав место для костра, туалета, навес, можно за несколько часов устроить лагерь 
-										для десятков туристов.</br>
-										<b>- Горнолыжный комплекс.</b> Утепленные юрты можно дополнить отоплением (печки, радиаторы) 
-										и установить у самого подножия гор, у подъемников. Можно использовать и зимой, и летом.</br>
-										<b>- Придорожный комплекс.</b> Юрта может служить и точкой общепита, и оборудована для 
-										ночлега дальнобойщиков.</br>
-										<b>- Юрта в усадьбе</b> конкретного человека может использоваться в качестве летней кухни, 
-										беседки, места для приема гостей, как личное помещение для творчества (мастерская 
-										художника).</br>
-										<b>- Выездная летняя пасека, зимой</b> - хранилище для пчелиных семей.</br>
-										<b>- Вахтовый поселок</b> для геологов, археологов, нефтяников и т.д. в труднодоступных 
-										местах.</br>
-										<b>- Торговый павильон</b> в городе. Кафе, ресторан в этническом стиле.</br>
-										<b>- Сооружения на террасе, крыше.</b> Возможно использование на любой высоте и устойчиво 
-										к любым ветровым нагрузкам.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
 	
+	<%= render 'layouts/how_to_buy' %>
+	<%= render 'layouts/description' %>
 						<!--Контактная форма-->
 
 	<%= render 'layouts/contact_form' %>

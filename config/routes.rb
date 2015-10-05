@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create, :destroy]
   resources :contact_forms, only: [:new, :create, :destroy]
   resources :items, only: [:new, :create, :destroy]
+  resources :articles
+  
   root 'static_pages#home'
   match '/',        to: 'static_pages#home',       via: 'post'
   match '/manager', to: 'static_pages#manager',    via: 'get'
@@ -10,6 +12,8 @@ Rails.application.routes.draw do
   match '/manager', to: 'sessions#create',         via: 'post'
   match '/signin',  to: 'sessions#new',            via: 'get'
   match '/signout', to: 'sessions#destroy',        via: 'delete'
+  match '/manager', to: 'static_pages#manager',    via: 'edit'
+  match '/manager', to: 'static_pages#manager',    via: 'update'
 
   
 
