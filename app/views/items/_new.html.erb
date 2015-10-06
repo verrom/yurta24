@@ -42,15 +42,68 @@
          </div>
       </div>
 
-   <div class="row">
-      <%= f.label "Характеристика 3" %><%= f.text_field :variable3 %>
-      <%= f.label "Значение 3" %><%= f.text_field :value3 %>
-      <%= f.label "Характеристика 4" %><%= f.text_field :variable4 %>
-      <%= f.label "Значение 4" %><%= f.text_field :value4 %>
-   </div>  
-      <%= f.label "Комментарий" %><%= f.text_field :comment %>
-      <%= f.label "Цена" %><%= f.text_field :price %>
-      <%= f.label :image %> <%= f.file_field :image %>
-      <%= f.submit %>
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.label "Характеристика 3" %>
+            </div>
+            <div class="col-lg-3">
+               <%= f.text_field :variable3 %>
+            </div>
+            <div class="col-lg-2">
+               <%= f.label "Значение 3" %>
+            </div>
+            <div class="col-lg-3">
+               <%= f.text_field :value3 %>
+            </div>
+         </div>
+            <div class="row col-lg-12">
+               <div class="col-lg-2">
+                  <%= f.label "Характеристика 4" %>
+               </div>
+               <div class="col-lg-3">
+                  <%= f.text_field :variable4 %>
+               </div>
+               <div class="col-lg-2">
+                  <%= f.label "Значение 4" %>
+               </div>
+               <div class="col-lg-3">
+                  <%= f.text_field :value4 %>
+               </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+                  <%= f.label "Комментарий" %>
+            </div>
+            <div class="col-lg-3">
+                  <%= f.text_field :comment %>
+            </div>
+            <div class="col-lg-2">
+                  <%= f.label "Price" %>
+            </div>
+            <div class="col-lg-3">
+                  <%= f.text_field :price %>
+            </div>
+         </div>   
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+                  <%= f.label :image %><%= f.file_field :image %>
+            </div>
+         </div>   
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.submit %>   
+            </div> 
+         </div>  
+      </div>
 <% end %>
 <hr>

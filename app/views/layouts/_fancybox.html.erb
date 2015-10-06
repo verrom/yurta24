@@ -1,9 +1,11 @@
-<%= button_tag(type: 'submit', class: "btn btn-success center-block button-contact-form fancybox") do %>
-	<%= link_to "Show mah Fancybox!", "#hello", class: "fancybox" %>
-<% end %>
-
 <div style="display:none;">
-  <div id="hello">
-  Hello world!
+  <div id="hello" class="fancybox-window">
+  	<div class = "form-group">
+    	<input type="text" class="form-control" id="InputName" placeholder="Ваше имя">
+	</div>
+	<div class = "form-group">
+    	<input type="text" class="form-control" id="InputPhone" placeholder="Ваш телефон">
+	</div>
+	<a class="btn btn-success button-contact-form button-contact-form-phone fancybox" href="#hello" role="button">Перезвоните мне</a>
   </div>
 </div>

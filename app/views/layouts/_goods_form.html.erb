@@ -4,7 +4,7 @@
 			<%= image_tag item.image.url,  class: "img-responsive img-properties img-properties-radius" %>
 			<%= image_tag "line_3.png", class: "img-responsive img-properties" %>
 			<div class="goods-name">
-				Юрта 4-стенная с орнаментом	
+				<%= item.item_name %>	
 			</div>
 			<table class="goods-description">
 				<tr>
@@ -21,7 +21,7 @@
 			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 goods-price-description">
-					260000 руб.
+					<%= item.price %> руб	
 				</div>
 			</div>	
 		</div>
