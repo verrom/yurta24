@@ -1,12 +1,47 @@
-<h1>Items manage</h1>
+<h2>Добавление товара</h1>
 <%= form_for @item do |f| %>
-      <%= f.label "Название" %><%= f.text_field :item_name %>
-   <div class="row">
-      <%= f.label "Характеристика 1" %><%= f.text_field :variable1 %>
-      <%= f.label "Значение 1" %><%= f.text_field :value1 %>
-      <%= f.label "Характеристика 2" %><%= f.text_field :variable2 %>
-      <%= f.label "Значение 2" %><%= f.text_field :value2 %>
-   </div>
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.label "Название" %>
+            </div>
+            <div class="col-lg-3">
+               <%= f.text_field :item_name %>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.label "Характеристика 1" %>
+            </div>
+            <div class="col-lg-3">
+               <%= f.text_field :variable1 %>
+            </div>
+            <div class="col-lg-2">
+               <%= f.label "Значение 1" %>
+            </div>
+            <div class="col-lg-3">
+               <%= f.text_field :value1 %>
+            </div>
+         </div>
+            <div class="row col-lg-12">
+               <div class="col-lg-2">
+                  <%= f.label "Характеристика 2" %>
+               </div>
+               <div class="col-lg-3">
+                  <%= f.text_field :variable2 %>
+               </div>
+               <div class="col-lg-2">
+                  <%= f.label "Значение 2" %>
+               </div>
+               <div class="col-lg-3">
+                  <%= f.text_field :value2 %>
+               </div>
+         </div>
+      </div>
+
    <div class="row">
       <%= f.label "Характеристика 3" %><%= f.text_field :variable3 %>
       <%= f.label "Значение 3" %><%= f.text_field :value3 %>
@@ -18,3 +53,4 @@
       <%= f.label :image %> <%= f.file_field :image %>
       <%= f.submit %>
 <% end %>
+<hr>
