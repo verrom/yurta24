@@ -6,7 +6,6 @@ gem 'rails', '4.2.4'
 gem 'bootstrap-sass',       '3.3.5.1'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'dragonfly', '~> 1.0.12'
-gem 'wmd-rails'
 gem 'fancybox-rails'
 # Use sqlite3 as the database for Active Record
 
