@@ -6,8 +6,13 @@ class ContactFormsController < ApplicationController
 
  def create
 	@contact_form = ContactForm.new contact_form_params
-	@contact_form.save
-	redirect_to root_path
+	if @contact_form.save
+		flash[:success] = "Мы свяжемся с Вами в ближайшее время!"
+		redirect_to root_path
+	else
+		flash[:error] = "Данные введены некорректно!"
+		redirect_to root_path	
+	end
  end
 
  def destroy

@@ -7,12 +7,14 @@ class StaticPagesController < ApplicationController
   end
 
   def manager
-  	@contact_messages = ContactForm.all
-  	@item = Item.new
-  	@items = Item.all
-  	@article = Article.new
-    @articles = Article.all
-    @description = Description.new
-    @descriptions = Description.all
+    if signed_in?
+    	@contact_messages = ContactForm.all
+    	@item = Item.new
+    	@items = Item.all
+    	@article = Article.new
+      @articles = Article.all
+      @description = Description.new
+      @descriptions = Description.all
+    end
   end
 end

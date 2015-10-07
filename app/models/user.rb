@@ -1,8 +1,9 @@
 class User < ActiveRecord::Base
 	before_create :create_remember_token
 	validates :name, presence: true, uniqueness: true, length: { maximum: 10 }
-	validates :password, length: { minimum: 6 }
+	
   has_secure_password
+  validates :password, length: { minimum: 6 }
 
 	def User.new_remember_token
     	SecureRandom.urlsafe_base64
@@ -10,7 +11,7 @@ class User < ActiveRecord::Base
 
  	def User.encrypt(token)
     	Digest::SHA1.hexdigest(token.to_s)
-  	end
+  end
 
   private
 

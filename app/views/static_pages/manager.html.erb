@@ -1,9 +1,10 @@
-<h1>Административный раздел <%= link_to "Выйти", signout_path, method: "delete" %></h1>
-<div class="container">
-	<%= render 'contact_forms/new' %>
-	<%= render 'items/new' %>
-	<%= render 'layouts/item_list' %>
-	<%= render 'articles/show' %>
-	<%= render 'descriptions/show' %>
-
-</div>
+<% if signed_in? %>
+	<h1>Административный раздел <%= link_to "Выйти", signout_path, method: "delete" %></h1>
+	<div class="container">
+		<%= render 'contact_forms/new' %>
+		<%= render 'items/new' %>
+		<%= render 'layouts/item_list' %>
+		<%= render 'articles/show' %>
+		<%= render 'descriptions/show' %>
+	</div>
+<%end%>
