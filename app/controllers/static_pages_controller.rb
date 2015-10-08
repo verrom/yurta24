@@ -4,6 +4,7 @@ class StaticPagesController < ApplicationController
   	@items = Item.all
     @articles = Article.all
     @descriptions = Description.all
+    @popup_contact_form = PopupContactForm.new
   end
 
   def manager
@@ -15,6 +16,7 @@ class StaticPagesController < ApplicationController
       @articles = Article.all
       @description = Description.new
       @descriptions = Description.all
+      @popup_contact_forms = PopupContactForm.all
     end
   end
 end

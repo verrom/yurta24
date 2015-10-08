@@ -313,10 +313,19 @@ hr {
 
 .fancybox-window {
 	background: #799819;
-	width: 450px;
-	height: 300px;
+	width: 500px;
+	height: 350px;
+	padding-top: 60px;
 }
 
 h1 {
 	text-align: center;
+}
+
+.PopUpInput {
+	width: 80%;
+}
+
+.popup-margin {
+	vertical-align: center;
 }

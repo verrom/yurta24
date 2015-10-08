@@ -1,13 +1,15 @@
 Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
+  resources :popup_contact_forms
   resources :contact_forms, only: [:new, :create, :destroy]
   resources :items, only: [:new, :create, :destroy]
   resources :articles
   resources :descriptions
+
   
   root 'static_pages#home'
-  match '/',        to: 'static_pages#home',       via: 'post'
+  match '/',        to: 'static_pages#home',       via: 'post' 
   match '/manager', to: 'static_pages#manager',    via: 'get'
   #match '/manager', to: 'static_pages#manager',    via: 'post'
   #match '/manager', to: 'sessions#create',         via: 'post'
