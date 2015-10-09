@@ -37,9 +37,9 @@
 	</div>
 
 	<div class="container" id = "prices">
-		<div class="row">
-			<div class="col-lg-4">
-				<a type="button" id="get-price" class="btn btn-success center-block button-get-price" 
+		<div class="row center-block">
+			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+				<a type="button" id="get-price" class="btn btn-success button-get-price" 
 					href="<%= asset_path('1.txt') %>">Получить прайс!</a>
 			</div>
 		</div>	
@@ -52,7 +52,7 @@
 	<%= render 'layouts/description' %>
 						<!--Контактная форма-->
 
-	<%= render 'layouts/contact_form' %>
+	<%= render 'contact_forms/new' %>
 
 	<%= render 'layouts/contacts' %>
 <!--						

@@ -1,0 +1,64 @@
+<h2>Входящие сообщения (<%= @contact_messages.count %>)</h2>
+
+<table class="table table-bordered">
+	<tr>		
+		<td>Дата, время</td>
+		<td>Имя</td>	
+		<td>Телефон</td>				
+		<td>Почта</td>
+		<td>Сообщение</td>	
+	</tr>
+
+
+	<% @contact_messages.each do |contact_form| %>
+	  	<tr>
+		  	<td><%= contact_form.created_at %></td>
+	  		<td><%= contact_form.name %></td>			   
+			<td><%= contact_form.phone %></td>
+			<td><%= contact_form.email %></td>
+			<td><%= contact_form.text %></td>
+			<td>
+				<%= link_to "delete", contact_form, method: :delete,
+                            data: { confirm: "Вы уверены?" }%>
+            </td>
+		</tr>  
+	<% end %>
+	
+</table>
+<hr>
+
+
+<!--
+  	<% @contact_messages.each do |contact_form| %>
+		  	<div class = "container border">
+			    <div class = "row col-lg-12">
+			    	<div class="col-lg-2">
+						<span class="timestamp">
+	    					<%= contact_form.created_at %>
+	  					</span>
+	  				</div>
+				    <div class="col-lg-1">
+					    <%= contact_form.name %>
+					</div>
+				    
+				    <div class="col-lg-2">  
+				      	<%= contact_form.phone %>
+				    </div>
+
+				    <div class="col-lg-2">
+				      	<%= contact_form.email %>
+				    </div>
+
+				    <div class="col-lg-4">
+				      	<%= contact_form.text %>
+				    </div>
+
+				    <div class="col-lg-1">
+						<%= link_to "delete", contact_form, method: :delete,
+                                     data: { confirm: "Вы уверены?" }%>
+					</div>
+			    </div>
+		    </div>   
+	   	<% end %>
+
+	   	-->

@@ -1,7 +1,8 @@
 <% if signed_in? %>
 	<h1>Административный раздел <%= link_to "Выйти", signout_path, method: "delete" %></h1>
 	<div class="container">
-		<%= render 'contact_forms/new' %>
+		<%= render 'contact_forms/show' %>
+		<%= render 'popup_contact_form/show' %>
 		<%= render 'items/new' %>
 		<%= render 'layouts/item_list' %>
 		<%= render 'articles/show' %>

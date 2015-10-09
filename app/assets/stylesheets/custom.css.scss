@@ -83,10 +83,14 @@ figure.green-background {
   height: 40px;
 }
 
-.why-yurta-block img {
-  text-align: center;
-  margin: 0 auto;
-  display: block;
+why-yurta-block {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+
+.why-yurta-block-img {
+	margin-left: 10px;
 }
 
 .why-yurta-block-description {
@@ -242,11 +246,7 @@ td {
 
 
 /*не нужно*/
-.why-yurta-description {
-	color: white;
-	font-weight: 600;
-	text-align: center;
-}
+
 
 .btn-success {
 	margin-top:60px;
@@ -313,9 +313,9 @@ hr {
 
 .fancybox-window {
 	background: #799819;
-	width: 500px;
-	height: 350px;
-	padding-top: 60px;
+	width: 520px;
+	height: 380px;
+	padding-top: 30px;
 }
 
 h1 {
@@ -324,6 +324,7 @@ h1 {
 
 .PopUpInput {
 	width: 80%;
+	margin: auto;
 }
 
 .popup-margin {
