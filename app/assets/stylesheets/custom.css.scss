@@ -21,9 +21,6 @@ div.all-banners-width {
   width: 100%;
 }
 
-.all-banners-width img {
-	float: left;
-}
 
 figure.header {
   padding-top: 12.6%;  /* 450px/800px = 0.5625 */
@@ -90,7 +87,7 @@ why-yurta-block {
 }
 
 .why-yurta-block-img {
-	margin-left: 10px;
+	margin: 0 auto;
 }
 
 .why-yurta-block-description {
@@ -214,8 +211,7 @@ td {
 }
 
 .pictograms {
-	margin-left: 15px;
-	margin-right: 0px;
+	margin: 0 auto;
 }
 
 .title-1 {
