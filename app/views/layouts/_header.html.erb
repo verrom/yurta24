@@ -23,13 +23,13 @@
                             <%= link_to "Почему мы", 			'#why_we_are' %>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "Цены на продукцию", 	'#prices' %>
+                            <%= link_to "Цены", 	'#prices' %>
                         </li>
                         <li class="page-scroll">
                             <%= link_to "Как мы работаем", 		'#how_we_work' %>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "Возможное применение", '#applying' %>
+                            <%= link_to "Применение", '#applying' %>
                         </li>
                        <li class="page-scroll">
                             <%= link_to "Контакты", '#contacts' %>
@@ -42,10 +42,38 @@
     </nav>
 
 
+
     <div class="all-banners-width">
-        <%= image_tag "logo.png", class: "img-responsive col-5" %>
-        <a class="btn btn-success button-contact-form button-contact-form-phone button-get-price fancybox col-md-3 col-lg-3" href="#hello" id="get-price" role="button">Заказать звонок</a>
-        <figure class="header">
-        </figure>
-              <%= render 'popup_contact_form/new' %>
+
+            <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+            </div>
+            <div class="col-xs-3 col-sm-3 col-md-4 col-lg-5">
+                <%= image_tag "logo.png", class: "img-responsive col-md-7 logo" %>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-6 col-lg-4">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-12">
+                            <p class="phone">+7 (391) 2888-313</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-12 header-paddings">
+                        <a class="btn btn-success button-contact-form button-contact-form-phone button-get-price fancybox button-contact-form-small" href="#hello" id="get-price" role="button">Заказать звонок</a>
+                    </div>
+                    <%= render 'popup_contact_form/new' %>
+                </div>
+            </div>
+            <figure class="header">
+            </figure>
     </div>
+
+
+    <!--
+        <div class="all-banners-width">
+            <%= image_tag "logo.png", class: "img-responsive col-5" %>
+            <a class="btn btn-success button-contact-form button-contact-form-phone button-get-price fancybox col-md-3 col-lg-3" href="#hello" id="get-price" role="button">Заказать звонок</a>
+            <figure class="header">
+            </figure>
+            <%= render 'popup_contact_form/new' %>
+    </div>
+    -->

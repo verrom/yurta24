@@ -3,18 +3,18 @@
   	<%= form_for @popup_contact_form do |f| %>
 		<div class = "form-group paddings-2">
 				<label for="InputName"></label>
-				<%= f.text_field :name, class: "form-control PopUpInput center-bloc", placeholder: "Ваше имя" %>	
+				<%= f.text_field :name, class: "form-control PopUpInput", placeholder: "Ваше имя" %>	
 			</div>
 			<div class = "form-group">
 				<label for="InputName"></label>
-				<%= f.text_field :phone, class: "form-control PopUpInput center-bloc", placeholder: "Ваш телефон" %>	
+				<%= f.text_field :phone, class: "form-control PopUpInput", placeholder: "Ваш телефон" %>	
 			</div>
 			<div class="PopUpInput center-block">
 				<%= button_tag(type: 'submit', class: "btn btn-success button-contact-form button-get-price", 
 				id: "get-price") do %> 
 				Перезвоните мне
 				<% end %>
-		</div>
+			</div>
 	<% end %>
   </div>
 </div>

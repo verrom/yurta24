@@ -21,7 +21,6 @@ div.all-banners-width {
   width: 100%;
 }
 
-
 figure.header {
   padding-top: 12.6%;  /* 450px/800px = 0.5625 */
   background-image: url('header.png');
@@ -150,11 +149,8 @@ why-yurta-block {
   margin-top: 40px;
 }
 
-#logo {
-  position: absolute;
-  margin-top: -5px;
-  margin-left: 220px;
-
+.about-us {
+	text-align: left;	
 }
 
 .paddings {
@@ -167,6 +163,10 @@ why-yurta-block {
 
 .paddings-3 {
 	padding-top: 20px;
+}
+
+.paddings-4 {
+	padding-top: 60px;
 }
 
 .padd-bottom {
@@ -252,6 +252,7 @@ td {
 
 body {
 	background-color: #f5f3e3;
+	overflow-x: hidden;
 }
 
 .margin-bottom-top {
@@ -271,7 +272,7 @@ body {
 .button-contact-form-phone {
 	float: left;
 	float: right;
-	margin-right: 10px;
+	
 }
 
 #get-price:hover {
@@ -312,6 +313,7 @@ hr {
 	width: 520px;
 	height: 380px;
 	padding-top: 30px;
+	overflow-x: hidden;
 }
 
 h1 {
@@ -321,8 +323,44 @@ h1 {
 .PopUpInput {
 	width: 80%;
 	margin: auto;
+	text-align: center;
 }
 
 .popup-margin {
 	vertical-align: center;
+}
+
+.phone {
+	margin-top: 50px;
+	text-align: right;
+	font-size: 28pt;
+	color: white;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	margin-top: 20px;
+}
+
+.header-paddings {
+	margin-top: -60px;
+	padding-bottom: 0px;
+}
+
+.button-contact-form-small {
+	font-size: 28pt;
+}
+
+@media screen and (max-width: 1100px) {
+    .phone  {
+        font-size: 16pt;
+    }
+
+    .button-contact-form-small {
+        font-size: 16pt;
+    }
+}
+
+@media screen and (max-width: 400px) {
+	.fancybox-window {
+		height: 100px;
+	}
 }

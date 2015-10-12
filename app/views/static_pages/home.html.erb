@@ -2,79 +2,13 @@
 
 	<%= render 'layouts/header' %>
 	<%= render 'layouts/main_banner' %>
-
 	<%= render 'layouts/green_line' %>
 	<%= render 'layouts/about_us' %>
-
-	<div class="container">
-		<div class="row">
-			<div class="center-block col-lg-10" style="float: none">
-				<div class="col-md-4 col-xs-6 col-sm-4 padd-bottom">
-					<%= image_tag "goods.png", class: "img-responsive img-properties img-properties-radius" %>
-				</div>
-
-				<div class="col-md-4 col-xs-6 col-sm-4 padd-bottom">
-					<%= image_tag "goods.png", class: "img-responsive img-properties img-properties-radius" %>
-				</div>
-
-				<div class="col-md-4 col-xs-6 col-sm-4 padd-bottom">
-					<%= image_tag "goods.png", class: "img-responsive img-properties img-properties-radius" %>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<%= render 'layouts/why_we_are' %>
-	
-	
 	<%= render 'layouts/green_line' %>
-
-	<div class="container" style="float: none">
-		<div class="row center-block" style="float: none">
-						<!-- Форма товара-->
-			<%= render 'layouts/goods_form' %>	
-		</div>
-	</div>
-
-	<div class="container" id = "prices">
-		<div class="row center-block">
-			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-				<a type="button" id="get-price" class="btn btn-success button-get-price" 
-					href="<%= asset_path('1.txt') %>">Получить прайс!</a>
-			</div>
-		</div>	
-	</div>
-	
-
-	
-	
+	<%= render 'items/show' %>	
+	<%= render 'layouts/get_price' %>
 	<%= render 'layouts/how_to_buy' %>
 	<%= render 'layouts/description' %>
-						<!--Контактная форма-->
-
 	<%= render 'contact_forms/new' %>
-
 	<%= render 'layouts/contacts' %>
-<!--						
-		<div class="all-banners-width">
-			<figure class="green-background margin-bottom-top">
-				<div class="container">
-					<div class="row">
-							<div class="center-block col-md-8 col-lg-12 title-1" style="float: none">	
-								Еще видео
-							</div>
-					</div>	
-				</div>
-			</figure>
-		</div>
-	
-	<div class="row all-banners-width">
-		<div class="col-xs-10 col-sm-4 col-lg-3 center-block" style="float: none">
-			<div class="embed-responsive embed-responsive-16by9 img-radius">
-				<div class="video">
-					<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/yKvyP5lt7mI?autoplay=0&loop=0&showinfo=0&theme=dark&color=red&controls=1&modestbranding=0&start=0&fs=1&iv_load_policy=1&wmode=transparent&rel=1" frameborder="0" allowfullscreen></iframe>
-				</div>
-			</div>
-		</div>
-	</div>	
--->

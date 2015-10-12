@@ -1,14 +1,14 @@
-<h2>(<%= @popup_contact_forms.count %>) человек ожидают входящего звонка</h2>
+<h2>(<%= @popup_contact_forms.count %>) человек(а) ожидают входящего звонка</h2>
 
 <table class="table table-bordered">
 	<tr>
-		<td>Дата, время</td>
-		<td>Имя</td>
-		<td>Телефон</td>
+		<td><strong>Дата, время</strong></td>
+		<td><strong>Имя</strong></td>
+		<td><strong>Телефон</strong></td>
 	</tr>
 
 	<% @popup_contact_forms.each do |popup_contact_form| %>
-		<tк>
+		<tr>
 			<td><%= popup_contact_form.created_at %></td>
 			<td><%= popup_contact_form.name %></td>
 			<td><%= popup_contact_form.phone %></td>
