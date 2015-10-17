@@ -1,4 +1,5 @@
 # Load DSL and set up stages
+set :rbenv_ruby, '2.1.5p273'
 require 'capistrano/setup'
 
 # Include default deployment tasks
