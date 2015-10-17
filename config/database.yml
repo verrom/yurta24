@@ -5,7 +5,8 @@ development:
   timeout: 5000
 
 production:
-  adapter: mysql2
-  database: db/production.mysql2
+  encoding: utf8
+  database: postgresql
   pool: 5
-  timeout: 5000
+  username: production
+  password: Production1
