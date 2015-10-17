@@ -66,3 +66,13 @@ connect_to = "#{$user}@#{$server}"
 role :app, [connect_to]
 role :web, [connect_to]
 role :db,  [connect_to]
+
+set :ssh_options, {
+    forward_agent: true,
+    auth_methods: %w(password),
+    password: 'miNXBVDcJKk',
+    user: 'yurta24',
+    port: 22
+}
+
+set :enable_ssl, false
