@@ -7,6 +7,7 @@ gem 'bootstrap-sass', '3.3.5.1'
 gem 'bcrypt-ruby', '3.1.2'
 gem 'dragonfly', '1.0.12'
 gem 'fancybox-rails', '0.3.0'
+gem 'unicorn'
 # Use sqlite3 as the database for Active Record
 
 # Use SCSS for stylesheets
@@ -58,6 +59,11 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  gem 'capistrano'
+  gem 'capistrano-rails'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rvm'
+  gem 'capistrano-rbenv'
 end
 
 group :production do
