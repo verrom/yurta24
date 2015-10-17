@@ -43,7 +43,7 @@ gem 'therubyracer', '0.12.2', :platforms => :ruby
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-group :development, :production, :test do
+group :development, :test do
   gem 'sqlite3', '1.3.8'
   gem 'rspec-rails', '2.13.1'
 end
