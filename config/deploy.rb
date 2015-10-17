@@ -13,13 +13,13 @@ unicorn_start_cmd = "(cd #{ deploy_to }/current; rvm use #{ rvm_ruby_string } do
 
 set :application, application 
 #set :repo_url, "ssh://#{ $user }@#{ $server }/home/#{ $user }/git/#{ application }.git"
-set :repository, "https://github.com/verrom/yurta24.git"
+set :repo_url, "https://github.com/verrom/yurta24.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
- set :deploy_to, deploy_to
+ #set :deploy_to, deploy_to
 
 # Default value for :scm is :git
 
@@ -45,12 +45,6 @@ set :repository, "https://github.com/verrom/yurta24.git"
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
-
-after "deploy:update_code", :copy_database_config
-task :copy_database_config, roles => :app do
-  db_config = "#{shared_path}/database.yml"
-  run "cp #{db_config} #{release_path}/config/database.yml"
-end
 
 namespace :deploy do
 
