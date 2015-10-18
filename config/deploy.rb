@@ -12,8 +12,8 @@ unicorn_pid = "/var/run/unicorn/#{ $user }/#{ application }.#{ login }.pid"
 unicorn_start_cmd = "(cd #{ deploy_to }/current; rvm use #{ rvm_ruby_string } do bundle exec unicorn_rails -Dc #{ unicorn_conf })"
 
 set :application, application 
-set :repo_url, "ssh://#{ $user }@#{ $server }/home/#{ $user }/git/#{ application }.git"
-#set :repo_url, "https://github.com/verrom/yurta24.git"
+#set :repo_url, "ssh://#{ $user }@#{ $server }/home/#{ $user }/git/#{ application }.git"
+set :repo_url, "https://github.com/verrom/yurta24.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
