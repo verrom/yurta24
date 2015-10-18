@@ -19,7 +19,8 @@ set :repo_url, "https://github.com/verrom/yurta24.git"
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
 # Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, deploy_to
+#set :deploy_to, deploy_to
+set :deploy_via, :copy
 
 # Default value for :scm is :git
 
