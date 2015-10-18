@@ -12,8 +12,8 @@ test:
 
 production:
   adapter: postgresql
-  database: postgres
-  username: postgres
-  password: youpassword
+  database: yurta24_yurtad18
+  username: yurta24_yurtad18
+  password: 609256418
   pool: 5
   timeout: 500
