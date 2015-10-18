@@ -69,12 +69,4 @@ role :db,  [connect_to]
 
 #server 'calcium.locum.ru', user: 'hosting_yurta24', roles: %w{web app db}, deploy_to: '/home/deploy/my_project_staging'
 
-set :ssh_options, {
-    forward_agent: true,
-    auth_methods: %w(password),
-    password: 'miNXBVDcJKk',
-    user: 'yurta24',
-    port: 22
-}
-
-set :enable_ssl, false
+set :enable_ssl, true
