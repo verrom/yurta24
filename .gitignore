@@ -12,7 +12,6 @@
 /tmp
 
 # Игнорирование прочих ненужных файлов.
-database.yml
 doc/
 *.swp
 *~
@@ -20,3 +19,4 @@ doc/
 .DS_Store
 .idea
 .secret
+/.database.yml
