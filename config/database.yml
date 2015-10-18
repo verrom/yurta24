@@ -8,5 +8,4 @@ production:
   encoding: utf8
   database: postgresql
   pool: 5
-  username: production
-  password: 609256418
+  timeout: 5000
