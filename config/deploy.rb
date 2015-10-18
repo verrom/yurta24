@@ -17,7 +17,7 @@ set :bundle_without, [:development, :test]
 set :use_sudo,       false
 
 set :repo_url,       "#{fetch(:user)}@calcium.locum.ru:" \
-                     "https://github.com/verrom/yurta24.git"
+                     "git@github.com:verrom/yurta24.git"
 
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
