@@ -50,6 +50,10 @@ set :unicorn_start_cmd,
     "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_version)} " \
     "do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)})"
 
+
+set :default_env, {
+    path: '/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/rvm/bin' }
+
 # - for unicorn - #
 namespace :deploy do
   desc 'Start application'
