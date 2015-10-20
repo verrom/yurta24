@@ -1,64 +1,80 @@
-# config valid only for current version of Capistrano
+# encoding: utf-8
+# config valid only for Capistrano 3
 lock '3.4.0'
-require 'net/ssh/proxy/http'
 
-sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
-set :ssh_options, { :proxy => sshproxy }
+# Project configuration options
+# ------------------------------
 
-application = 'yurta24'
-login = 'yurta24'
-$user = 'hosting_' + login
-$server = 'calcium.locum.ru'
-rvm_ruby_string = '2.1.5p273'
-deploy_to = "/home/#{ $user }/projects/#{ application }"
-unicorn_conf = "/etc/unicorn/#{ application }.#{ login }.rb"
-unicorn_pid = "/var/run/unicorn/#{ $user }/#{ application }.#{ login }.pid"
-unicorn_start_cmd = "(cd #{ deploy_to }/current; rvm use #{ rvm_ruby_string } do bundle exec unicorn_rails -Dc #{ unicorn_conf })"
+set :application,    'yurta24'
+set :login,          'yurta24'
+set :user,           'hosting_yurta24'
 
-set :application, application 
-#set :repo_url, "ssh://#{ $user }@#{ $server }/home/#{ $user }/git/#{ application }.git"
-set :repo_url, "https://github.com/verrom/yurta24.git"
+set :deploy_to,      "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
+set :unicorn_conf,   "/etc/unicorn/#{fetch(:application)}.#{fetch(:login)}.rb"
+set :unicorn_pid,    "/var/run/unicorn/#{fetch(:user)}/" \
+                     "#{fetch(:application)}.#{fetch(:login)}.pid"
+set :bundle_without, [:development, :test]
+set :use_sudo,       false
+
+set :repo_url,       "#{fetch(:user)}@calcium.locum.ru:" \
+                     "git@github.com:verrom/yurta24.git"
 
 # Default branch is :master
-# ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
+# ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
-# Default deploy_to directory is /var/www/my_app_name
-set :deploy_to, deploy_to
+set :scm, :git
+set :format, :pretty
+set :pty, true
 
-# Default value for :scm is :git
-
-
-# Default value for :format is :pretty
-# set :format, :pretty
-
-# Default value for :log_level is :debug
-# set :log_level, :debug
-
-# Default value for :pty is false
- set :pty, true
+# Change the verbosity level
+set :log_level, :info
 
 # Default value for :linked_files is []
-# set :linked_files, fetch(:linked_files, []).push('config/database.yml', 'config/secrets.yml')
+# set :linked_files, %w{config/database.yml}
 
 # Default value for linked_dirs is []
-# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+set :linked_dirs, %w(bin log tmp/cache vendor/bundle public/system)
 
-# Default value for default_env is {}
-  set :default_env, { path: "/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local/rvm/bin" }
-			
 # Default value for keep_releases is 5
 # set :keep_releases, 5
 
+# You unlikely have to change below this line
+# -----------------------------------------------------------------------------
 
+# Configure RVM
+set :rvm_ruby_version, '2.1.5'
+set :rake,            "rvm use #{fetch(:rvm_ruby_version)} do bundle exec rake"
+set :bundle_cmd,      "rvm use #{fetch(:rvm_ruby_version)} do bundle"
+
+set :unicorn_start_cmd,
+    "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_version)} " \
+    "do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)})"
+
+# - for unicorn - #
 namespace :deploy do
-
-  after :restart, :clear_cache do
-    on roles(:web), in: :groups, limit: 3, wait: 10 do
-      # Here we can do anything such as:
-      # within release_path do
-      #   execute :rake, 'cache:clear'
-      # end
+  desc 'Start application'
+  task :start do
+    on roles(:app) do
+      execute unicorn_start_cmd
     end
   end
 
+  desc 'Stop application'
+  task :stop do
+    on roles(:app) do
+      execute "[ -f #{fetch(:unicorn_pid)} ] && " \
+              "kill -QUIT `cat #{fetch(:unicorn_pid)}`"
+    end
+  end
+
+  after :publishing, :restart
+
+  desc 'Restart Application'
+  task :restart do
+    on roles(:app) do
+      execute "[ -f #{fetch(:unicorn_pid)} ] && " \
+              "kill -USR2 `cat #{fetch(:unicorn_pid)}` || " \
+              "#{fetch(:unicorn_start_cmd)}"
+    end
+  end
 end
