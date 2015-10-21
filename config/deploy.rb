@@ -5,10 +5,10 @@ lock '3.4.0'
 # Project configuration options
 # ------------------------------
 
-set :application,    'yurta24'
+set :application,    'yurta'
 set :login,          'yurta24'
-set :user,           'hosting_yurta24'
-
+$user =           'hosting_yurta24'
+$server = 'calcium.locum.ru'
 set :deploy_to,      "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
 set :unicorn_conf,   "/etc/unicorn/#{fetch(:application)}.#{fetch(:login)}.rb"
 set :unicorn_pid,    "/var/run/unicorn/#{fetch(:user)}/" \
@@ -18,7 +18,6 @@ set :use_sudo,       false
 
 set :repo_url,       "#{fetch(:user)}@calcium.locum.ru:" \
                      "git@github.com:verrom/yurta24.git"
-
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
 
