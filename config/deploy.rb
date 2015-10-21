@@ -7,7 +7,7 @@ lock '3.4.0'
 
 set :application,    'yurta'
 set :login,          'yurta24'
-$user =           'hosting_yurta24'
+set :user,           'hosting_yurta24'
 $server = 'calcium.locum.ru'
 set :deploy_to,      "/home/#{fetch(:user)}/projects/#{fetch(:application)}"
 set :unicorn_conf,   "/etc/unicorn/#{fetch(:application)}.#{fetch(:login)}.rb"
@@ -16,18 +16,18 @@ set :unicorn_pid,    "/var/run/unicorn/#{fetch(:user)}/" \
 set :bundle_without, [:development, :test]
 set :use_sudo,       false
 
-set :repo_url,       "#{fetch(:user)}@calcium.locum.ru:" \
-                     "git@github.com:verrom/yurta24.git"
+set :repo_url,   "git@github.com:verrom/yurta24.git"    
+                     
+#{}"#{fetch(:user)}@calcium.locum.ru:" \
 # Default branch is :master
 # ask :branch, proc { `git rev-parse --abbrev-ref HEAD`.chomp }.call
-
+set :deploy_to, deploy_to
 set :scm, :git
 set :format, :pretty
 set :pty, true
 
 # Change the verbosity level
 set :log_level, :info
-
 # Default value for :linked_files is []
 # set :linked_files, %w{config/database.yml}
 

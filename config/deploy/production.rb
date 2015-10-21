@@ -66,7 +66,7 @@ connect_to = "#{$user}@#{$server}"
 role :app, [connect_to]
 role :web, [connect_to]
 role :db,  [connect_to]
-
+server 'calcium.locum.ru', user: 'hosting_yurta24', roles: %w{web app db}
 #server 'calcium.locum.ru', user: 'hosting_yurta24', roles: %w{web app db}, deploy_to: '/home/deploy/my_project_staging'
 
 set :enable_ssl, true
