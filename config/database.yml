@@ -12,8 +12,7 @@ test:
 
 production:
   adapter: postgresql
-  database: you_app_name_production
-  username: yourdatabaseusername
-  password: youdatabasepassword
+  host:localhost
+  database: yurta_production
   pool: 5
   timeout: 5000
