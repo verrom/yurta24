@@ -12,7 +12,7 @@ test:
 
 production:
   adapter: postgresql
-  host:localhost
+  host: localhost
   database: yurta_production
   pool: 5
   timeout: 5000
