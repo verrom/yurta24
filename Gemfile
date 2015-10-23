@@ -45,6 +45,7 @@ gem 'therubyracer', '0.12.2', :platforms => :ruby
 
 group :development, :test do
   gem 'sqlite3', '1.3.8'
+  gem 'pg', '0.15.1'
 end
 
 group :test do
