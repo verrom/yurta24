@@ -68,14 +68,14 @@ figure.green-background {
 
 .green-splitter-high {
 
-    background-image: url('line_1.png');
+    background-image: image-url('line_1.png');
     height: 55px;
 	margin-bottom: 40px;
 
 }
 
 .green-splitter-medium {
-  background-image: url('line_4.png');
+  background-image: image-url('line_4.png');
   height: 40px;
 }
 
@@ -97,7 +97,7 @@ why-yurta-block {
 
 .header {
     display: block;
-    background: url('header.png') 100% 100% no-repeat;
+    background: image-url('header.png') 100% 100% no-repeat;
     height: 120px;
     margin-top: 50px;
 }
@@ -131,20 +131,20 @@ why-yurta-block {
 /* === */
 
 .line1 {
-  background-image: url('line_1.png');
+  background-image: image-url('line_1.png');
   background-repeat: repeat-x;
   padding-bottom: 0px;
 }
 
 .line2 {
-  background-image: url('line_2.png');
+  background-image: image-url('line_2.png');
   background-repeat: repeat-y;
   height: 100%;
   padding-bottom: 20px;
 }
 
 .line3 {
-  background-image: url('line_4.png');
+  background-image: image-url('line_4.png');
   background-repeat: repeat-x;
   margin-top: 40px;
 }
