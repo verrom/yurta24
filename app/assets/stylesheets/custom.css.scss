@@ -125,6 +125,7 @@ why-yurta-block {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
+	width: 100%;
 }
 
 
@@ -167,6 +168,10 @@ why-yurta-block {
 
 .paddings-4 {
 	padding-top: 60px;
+}
+
+.padd-top {
+	padding-top: 40px;
 }
 
 .padd-bottom {
@@ -347,6 +352,11 @@ h1 {
 
 .button-contact-form-small {
 	font-size: 28pt;
+}
+
+.white-text {
+	color: white;
+	font-weight: 600;
 }
 
 @media screen and (max-width: 1100px) {

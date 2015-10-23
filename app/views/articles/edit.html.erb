@@ -1,7 +1,6 @@
 <h1>Редактирование блока</h1>
  
 <%= form_for :article, url: article_path(@article), method: :patch do |f| %>
- 
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>
@@ -11,11 +10,7 @@
     <%= f.label :text %><br>
     <%= f.text_area :text %>
   </p>
- 
-  <%= button_tag(type: 'submit') do %>
-    Сохранить
-  <% end %>
- 
+  <%= f.submit "Сохранить" %>
 <% end %>
  
-<%= link_to 'Назад', articles_path %>
+<%= link_to 'Назад', manager_path %>

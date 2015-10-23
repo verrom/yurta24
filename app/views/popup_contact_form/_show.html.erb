@@ -2,18 +2,18 @@
 
 <table class="table table-bordered">
 	<tr>
-		<td><strong>Дата, время</strong></td>
-		<td><strong>Имя</strong></td>
-		<td><strong>Телефон</strong></td>
+		<td class="col-lg-2"><strong>Дата, время</strong></td>
+		<td class="col-lg-5"><strong>Имя</strong></td>
+		<td class="col-lg-4"><strong>Телефон</strong></td>
 	</tr>
 
 	<% @popup_contact_forms.each do |popup_contact_form| %>
 		<tr>
-			<td><%= popup_contact_form.created_at %></td>
+			<td><%= popup_contact_form.created_at.strftime("%H:%M %d.%m.%Y") %></td>
 			<td><%= popup_contact_form.name %></td>
 			<td><%= popup_contact_form.phone %></td>
 			<td>
-				<%= link_to "delete", popup_contact_form, method: :delete,
+				<%= link_to "Удалить", popup_contact_form, method: :delete,
 	                        data: { confirm: "Вы уверены?" }%>
 			</td>
 		</tr>   

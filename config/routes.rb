@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   
   root 'static_pages#home'
-  match '/',        to: 'static_pages#home',       via: 'post' 
+  match '/',        to: 'static_pages#home',       via: 'post'
   match '/manager', to: 'static_pages#manager',    via: 'get'
   #match '/manager', to: 'static_pages#manager',    via: 'post'
   #match '/manager', to: 'sessions#create',         via: 'post'
