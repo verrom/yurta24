@@ -82,7 +82,7 @@
                   <%= f.text_field :comment %>
             </div>
             <div class="col-lg-2">
-                  <%= f.label "Price" %>
+                  <%= f.label "Цена, руб" %>
             </div>
             <div class="col-lg-3">
                   <%= f.text_field :price %>
@@ -92,8 +92,8 @@
 
       <div class="container">
          <div class="row col-lg-12">
-            <div class="col-lg-2">
-                  <%= f.label :image %><%= f.file_field :image %>
+            <div class="col-lg-3">
+                  <%= f.label "Изображение (400x300 pix)" %><%= f.file_field :image %>
             </div>
          </div>   
       </div>
@@ -101,7 +101,7 @@
       <div class="container">
          <div class="row col-lg-12">
             <div class="col-lg-2">
-               <%= f.submit %>   
+               <%= f.submit "Cоздать товар" %> 
             </div> 
          </div>  
       </div>

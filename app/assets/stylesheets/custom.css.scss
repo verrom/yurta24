@@ -23,7 +23,7 @@ div.all-banners-width {
 
 figure.header {
   padding-top: 12.6%;  /* 450px/800px = 0.5625 */
-  background-image: url('header.png');
+  background-image: image-url('header.png');
   background-size: cover;
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-position: center;  /* Internet Explorer 7/8 */
@@ -31,7 +31,7 @@ figure.header {
 
 figure.banner-1 {
   padding-top: 30%;  /* 450px/800px = 0.5625 */
-  background-image: url('banner.png');
+  background-image: image-url('banner.png');
   background-size: cover;
   -moz-background-size: cover;  /* Firefox 3.6 */
   background-position: center;  /* Internet Explorer 7/8 */  
@@ -40,7 +40,7 @@ figure.banner-1 {
 figure.green-background {
 	padding-top: 1.19%;
 	padding-bottom: 20px;
-	background-image: url('line_2.png');
+	background-image: image-url('line_2.png');
 	height: 100%;
 	-moz-background-size: cover;  /* Firefox 3.6 */
 	background-position: center;  /* Internet Explorer 7/8 */    
@@ -68,14 +68,14 @@ figure.green-background {
 
 .green-splitter-high {
 
-    background-image: url('line_1.png');
+    background-image: image-url('line_1.png');
     height: 55px;
 	margin-bottom: 40px;
 
 }
 
 .green-splitter-medium {
-  background-image: url('line_4.png');
+  background-image: image-url('line_4.png');
   height: 40px;
 }
 
@@ -97,7 +97,7 @@ why-yurta-block {
 
 .header {
     display: block;
-    background: url('header.png') 100% 100% no-repeat;
+    background: image-url('header.png') 100% 100% no-repeat;
     height: 120px;
     margin-top: 50px;
 }
@@ -125,26 +125,27 @@ why-yurta-block {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
+	width: 100%;
 }
 
 
 /* === */
 
 .line1 {
-  background-image: url('line_1.png');
+  background-image: image-url('line_1.png');
   background-repeat: repeat-x;
   padding-bottom: 0px;
 }
 
 .line2 {
-  background-image: url('line_2.png');
+  background-image: image-url('line_2.png');
   background-repeat: repeat-y;
   height: 100%;
   padding-bottom: 20px;
 }
 
 .line3 {
-  background-image: url('line_4.png');
+  background-image: image-url('line_4.png');
   background-repeat: repeat-x;
   margin-top: 40px;
 }
@@ -167,6 +168,10 @@ why-yurta-block {
 
 .paddings-4 {
 	padding-top: 60px;
+}
+
+.padd-top {
+	padding-top: 40px;
 }
 
 .padd-bottom {
@@ -347,6 +352,11 @@ h1 {
 
 .button-contact-form-small {
 	font-size: 28pt;
+}
+
+.white-text {
+	color: white;
+	font-weight: 600;
 }
 
 @media screen and (max-width: 1100px) {

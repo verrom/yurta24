@@ -2,23 +2,23 @@
 
 <table class="table table-bordered">
 	<tr>		
-		<td><strong>Дата, время</strong></td>
-		<td><strong>Имя</strong></td>	
-		<td><strong>Телефон</strong></td>				
-		<td><strong>Почта</td>
-		<td><strong>Сообщение</strong></td>	
+		<td class="col-lg-1"><strong>Дата, время</strong></td>
+		<td class="col-lg-2"><strong>Имя</strong></td>	
+		<td class="col-lg-2"><strong>Телефон</strong></td>				
+		<td class="col-lg-2"><strong>Почта</td>
+		<td class="col-lg-4"><strong>Сообщение</strong></td>	
 	</tr>
 
 
 	<% @contact_messages.each do |contact_form| %>
 	  	<tr>
-		  	<td><%= contact_form.created_at %></td>
+		  	<td><%= contact_form.created_at.strftime("%H:%M %d.%m.%Y") %></td>
 	  		<td><%= contact_form.name %></td>			   
 			<td><%= contact_form.phone %></td>
 			<td><%= contact_form.email %></td>
 			<td><%= contact_form.text %></td>
 			<td>
-				<%= link_to "delete", contact_form, method: :delete,
+				<%= link_to "Удалить", contact_form, method: :delete,
                             data: { confirm: "Вы уверены?" }%>
             </td>
 		</tr>  

@@ -5,13 +5,8 @@ class PopupContactFormsController < ApplicationController
 
  def create
 	@popup_contact_form = PopupContactForm.new popup_contact_form_params
-	if @popup_contact_form.save
-		flash[:success] = "Мы свяжемся с Вами в ближайшее время!"
-		redirect_to root_path
-	else
-		flash[:error] = "Данные введены некорректно!"
-		redirect_to root_path	
-	end
+	@popup_contact_form.save
+	redirect_to root_path	
  end
 
  def destroy
