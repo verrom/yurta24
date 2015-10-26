@@ -12,8 +12,11 @@ test:
 
 production:
   adapter: postgresql
-  database: you_app_name_production
-  username: yourdatabaseusername
-  password: youdatabasepassword
+  encoding: unicode
   pool: 5
   timeout: 5000
+  database: yurta24_yurta60
+  username: yurta24_yurta60
+  password: j9MZlXBTrV
+  host: postgresql6.locum.ru
+
