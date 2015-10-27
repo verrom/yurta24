@@ -86,6 +86,7 @@ namespace :deploy do
   end
 end
 
-task :config_symlink do
+
+namespace :config_symlink do
   execute :chown, "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
 end
