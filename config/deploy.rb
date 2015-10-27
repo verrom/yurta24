@@ -3,7 +3,6 @@
 lock '3.4.0'
 
 require 'net/ssh/proxy/http'
-require "capistrano_database_yml.rb"
 
 sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
 set :ssh_options, { :proxy => sshproxy }
@@ -54,6 +53,10 @@ set :unicorn_start_cmd,
     "(cd #{fetch(:deploy_to)}/current; rvm use #{fetch(:rvm_ruby_version)} " \
     "do bundle exec unicorn_rails -Dc #{fetch(:unicorn_conf)})"
 
+
+before "deploy:assets:precompile", "config_symlink"
+after "deploy", "deploy:cleanup" # keep only the last 5 releases
+
 # - for unicorn - #
 namespace :deploy do
   desc 'Start application'
@@ -81,4 +84,8 @@ namespace :deploy do
               "#{fetch(:unicorn_start_cmd)}"
     end
   end
+end
+
+task :config_symlink do
+  run "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
 end
