@@ -89,5 +89,6 @@ end
 
 namespace :config_symlink do
   on roles :all do
-  execute :chown, "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+    execute :chown, "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+  end
 end
