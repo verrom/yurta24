@@ -88,7 +88,7 @@ namespace :deploy do
   desc 'Create symlink'
   task :config_symlink do
     on roles(:app) do
-      execute :chown, "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+      execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     end
   end
 end
