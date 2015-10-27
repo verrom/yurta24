@@ -1,6 +1,5 @@
 <div class="container" id = "prices">
-	<div class="row center-block">
-		<a type="button" id="get-price" class="btn btn-success button-get-price" 
-			href="<%= asset_path('1.txt') %>">Получить прайс!</a>
+	<div class="row center-block">	
+		<%= button_to "Получить прайс", asset_path("price.pdf"), method: :get, id: "get-price", class: "btn btn-success button-get-price" %>
 	</div>	
 </div>
