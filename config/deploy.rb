@@ -2,7 +2,11 @@
 # config valid only for Capistrano 3
 lock '3.4.0'
 
+require 'net/ssh/proxy/http'
+require "capistrano_database_yml"
 
+sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
+set :ssh_options, { :proxy => sshproxy }
 # Project configuration options
 # ------------------------------
 
