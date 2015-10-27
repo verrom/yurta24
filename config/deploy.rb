@@ -84,11 +84,11 @@ namespace :deploy do
               "#{fetch(:unicorn_start_cmd)}"
     end
   end
-end
 
-
-namespace :config_symlink do
-  on roles :all do
-    execute :chown, "ln -nfs #{deploy_to}/shared/config/database.yml #{release_path}/config/database.yml"
+  desc 'Create symlink'
+  task :config_symlink do
+    on roles(:app) do
+      execute :chown, "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    end
   end
 end
