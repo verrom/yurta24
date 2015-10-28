@@ -1,26 +1,28 @@
-<% @articles.each do |article| %>	
-	<div class="container">
-		<h2 class="center-block title-1 title-1-about-us " style="float: none" id = "about_us">
-		<%= article.title %></h2>
-		<div class="row">
-			<div class="center-block col-lg-10" style="float: none">
-				<div class="col-xs-12 col-sm-4">
-					<div class="embed-responsive embed-responsive-16by9 img-radius">
-						<div class="video">
-							<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/OKhnkzC4Y08?autoplay=0&loop=0&showinfo=0&theme=dark&color=red&controls=1&modestbranding=0&start=0&fs=1&iv_load_policy=1&wmode=transparent&rel=1" frameborder="0" allowfullscreen></iframe>
+<div id = "about_us">
+	<% @articles.each do |article| %>	
+		<div class="container">
+			<h2 class="center-block title-1 title-1-about-us " style="float: none">
+			<%= article.title %></h2>
+			<div class="row">
+				<div class="center-block col-lg-10" style="float: none">
+					<div class="col-xs-12 col-sm-4">
+						<div class="embed-responsive embed-responsive-16by9 img-radius">
+							<div class="video">
+								<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/OKhnkzC4Y08?autoplay=0&loop=0&showinfo=0&theme=dark&color=red&controls=1&modestbranding=0&start=0&fs=1&iv_load_policy=1&wmode=transparent&rel=1" frameborder="0" allowfullscreen></iframe>
+							</div>
 						</div>
 					</div>
-				</div>
-			
-				<div class="col-xs-12 col-sm-8 col-md-8">
-					<p class="about-us"><%= article.text %>
-					
-					</p>
+				
+					<div class="col-xs-12 col-sm-8 col-md-8">
+						<p class="about-us"><%= article.text %>
+						</p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-<% end %>
+	<% end %>
+</div>
+
 	<div class="container">
 		<div class="row">
 			<div class="center-block col-lg-10" style="float: none">
