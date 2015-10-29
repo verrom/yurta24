@@ -151,7 +151,7 @@ why-yurta-block {
 }
 
 .about-us {
-	text-align: left;	
+	text-align: left;
 }
 
 .paddings {
@@ -376,6 +376,24 @@ h1 {
 	}
 }
 
+.vertical-align-center {
+	margin-top: 5%;
+}
+
+@media screen and (max-width: 1100 px) {
+	.vertical-align-center {
+		margin-top: 0%;
+	}	
+}
+
 .margin-bottom-for-applience {
 	margin-bottom: 40px;
+}
+
+.navbar-header {
+	color: red;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color: white;
 }
