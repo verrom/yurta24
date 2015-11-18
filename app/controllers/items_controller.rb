@@ -4,10 +4,24 @@ class ItemsController < ApplicationController
        @item = Item.new
     end
     
+    def edit
+        @item = Item.find(params[:id])
+    end
+
     def create
        @item = Item.new item_params
        @item.save
        redirect_to manager_path
+    end
+
+    def update
+      @item = Item.find(params[:id])
+
+      if @item.update(item_params)
+        redirect_to manager_path
+      else
+        render 'edit'
+      end
     end
 
     def destroy
