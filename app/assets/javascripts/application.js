@@ -15,7 +15,9 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require turbolinks
+//= require tinymce-jquery
 //= require_tree .
+
 
 $(document).ready(function() {
   $("a.fancybox").fancybox();
