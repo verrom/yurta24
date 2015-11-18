@@ -1,0 +1,107 @@
+<h1>Editing item</h1>
+ 
+<%= form_for :item, url: item_path(@item), method: :patch do |f| %>
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.label "Название" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :item_name %>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.label "Характеристика 1" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :variable1 %>
+            </div>
+            <div class="col-lg-2 form-group">
+               <%= f.label "Значение 1" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :value1 %>
+            </div>
+         </div>
+            <div class="row col-lg-12">
+               <div class="col-lg-2 form-group">
+                  <%= f.label "Характеристика 2" %>
+               </div>
+               <div class="col-lg-3 form-group img-radius">
+                  <%= f.text_field :variable2 %>
+               </div>
+               <div class="col-lg-2 form-group">
+                  <%= f.label "Значение 2" %>
+               </div>
+               <div class="col-lg-3 form-group img-radius">
+                  <%= f.text_field :value2 %>
+               </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2 form-group">
+               <%= f.label "Характеристика 3" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :variable3 %>
+            </div>
+            <div class="col-lg-2 form-group">
+               <%= f.label "Значение 3" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :value3 %>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2 form-group">
+               <%= f.label "Характеристика 4" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :variable4 %>
+            </div>
+            <div class="col-lg-2 form-group">
+               <%= f.label "Значение 4" %>
+            </div>
+            <div class="col-lg-3 form-group img-radius">
+               <%= f.text_field :value4 %>
+            </div>
+         </div>
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2 form-group">
+                  <%= f.label "Комментарий" %>
+            </div>
+            <div class="col-lg-3 form-group img-properties-radius">
+                  <%= f.text_field :comment %>
+            </div>
+            <div class="col-lg-2 form-group">
+                  <%= f.label "Цена, руб" %>
+            </div>
+            <div class="col-lg-3 form-group img-properties-radius">
+                  <%= f.text_field :price %>
+            </div>
+         </div>   
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-3">
+                  <%= f.label "Изображение (400x300 pix)" %><%= f.file_field :image %>
+            </div>
+         </div>   
+      </div>
+  <%= f.submit "Сохранить" %>
+<% end %>
+ 
+<%= link_to 'Назад', manager_path %>
