@@ -1,6 +1,6 @@
 <div class = "container">
   <div class = "row col-lg-12">
-    <h1>Возможное применение</h1>
+    <h1>Блок 2 (снизу)</h1>
       <% @descriptions.each do |description| %>
         <%= raw description.text %>
         <%= link_to 'Изменить', edit_description_path(description) %>
@@ -8,3 +8,4 @@
     </table>
   </div>
 </div>
+<hr>

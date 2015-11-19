@@ -1,0 +1,21 @@
+<div class="row col-lg-12">
+<h1>Добавление изображений в фотогалерею</h1>
+<%= form_for Picture.new do |f| %>
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-3">
+                  <%= f.label "Изображение" %><%= f.file_field :image %>
+            </div>
+         </div>   
+      </div>
+
+      <div class="container">
+         <div class="row col-lg-12">
+            <div class="col-lg-2">
+               <%= f.submit "Добавить изображение", class: "btn btn-large btn-primary" %> 
+            </div> 
+         </div>  
+      </div>
+<% end %>
+<hr>
+</div>

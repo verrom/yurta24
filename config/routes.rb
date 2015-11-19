@@ -6,12 +6,13 @@ Rails.application.routes.draw do
   resources :items
   resources :articles
   resources :descriptions
+  resources :pictures
 
   
   root 'static_pages#home'
   match '/',        to: 'static_pages#home',       via: 'post'
   match '/manager', to: 'static_pages#manager',    via: 'get'
-  #match '/manager', to: 'static_pages#manager',    via: 'post'
+  match '/manager', to: 'static_pages#manager',    via: 'post'
   #match '/manager', to: 'sessions#create',         via: 'post'
   match '/signin',  to: 'sessions#new',            via: 'get'
   match '/signout', to: 'sessions#destroy',        via: 'delete'

@@ -1,0 +1,14 @@
+<h1>Изменить фото</h1>
+ 
+<%= form_for :picture, url: picture_path(@picture), method: :patch do |f| %>
+   <div class="container">
+      <div class="row col-lg-12">
+         <div class="col-lg-3">
+            <%= f.label "Изображение" %><%= f.file_field :image %>
+          </div>
+      </div>   
+   </div>
+   <%= f.submit "Сохранить" %>
+<% end %>
+ 
+<%= link_to 'Назад', manager_path %>

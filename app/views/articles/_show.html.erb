@@ -1,10 +1,12 @@
+
 <div class = "container">
   <div class = "row col-lg-12">
-    <h1>О нас</h1>
+  <hr>
+    <h1>Блок 1 (сверху)</h1>
       <% @articles.each do |article| %>
         <%=raw article.text %>
         <%= link_to 'Изменить', edit_article_path(article) %>
       <% end %>
-    </table>
   </div>
 </div>
+<hr>
