@@ -74,6 +74,15 @@ figure.green-background {
 
 }
 
+.photogallery {}
+.photogallery img {
+	border: 1px solid #BBB;
+	padding: 2px;
+	margin: 10px 20px 20px 20px;
+	vertical-align: top;
+	text-align: center;
+}
+
 .green-splitter-medium {
   background-image: image-url('line_4.png');
   height: 40px;
@@ -105,7 +114,16 @@ why-yurta-block {
 .goods-container {
     border: 1px solid grey;
     text-align: center;
-	border-radius: 10px;
+    border-radius: 12px;
+}
+
+.imagegallery-container {
+    text-align: center;
+}
+
+.imagegallery-container:hover {
+	border: 1px solid black;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 
 .goods-container:hover {
@@ -212,7 +230,7 @@ td {
 }
 
 .img-radius {
-	border-radius: 10px;
+	border-radius: 12px;
 }
 
 .pictograms {
