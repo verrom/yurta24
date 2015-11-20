@@ -1,20 +1,19 @@
 <div class = "container">
   <div class = "row col-lg-12">
-	<h1>Фотогалерея</h1>
+	<h2>Фотогалерея</h1>
 	<% @pictures.each do |picture| %>
-	<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 paddings-2">
-		<div class="goods-container">
-    		<%= image_tag picture.image.url if picture.image_stored? %>
+		<div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 paddings-2">
+			<div class="goods-container">
+	    		<%= image_tag picture.image.url if picture.image_stored? %>
+			</div>
+			<div class="col-lg-4">
+		                  <%= link_to "Удалить", picture, method: :delete,
+		                                     data: { confirm: "Вы уверены?" }%>
+		    </div>
+			<div class="col-lg-1">
+		    	<%= link_to 'Изменить', edit_picture_path(picture) %>
+		    </div>
 		</div>
-		<div class="col-lg-4">
-	                  <%= link_to "Удалить", picture, method: :delete,
-	                                     data: { confirm: "Вы уверены?" }%>
-	    </div>
-		<div class="col-lg-1">
-	    	<%= link_to 'Изменить', edit_picture_path(picture) %>
-	    </div>
-	</div>
 	<% end %>
   </div>
 </div>
-<hr>
