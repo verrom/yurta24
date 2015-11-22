@@ -21,7 +21,13 @@
 
 $(document).ready(function() {
   $("a.fancybox").fancybox();
-
 });
 
+$(document).ready(function() {
+	$("a.grouped_elements").fancybox({
+		type: 'image',
+		openEffect	: 'none',
+		closeEffect	: 'none',
 
+	});
+});

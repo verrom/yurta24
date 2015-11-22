@@ -5,13 +5,14 @@
 	<div class="row" style="float: none">
 		<% @pictures.each do |picture| %>
 			<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 paddings-2 photogallery">
-					<%= link_to image_tag(picture.image.url),
+					<%= link_to image_tag(picture.image.thumb('300x300#').url),
 							picture.image.url,
-					class: "fancybox", rel: "gallery1" %>
+					class: "grouped_elements", rel: "gallery1" %>
 			</div>
 		<% end %>
 	</div>
 </div>
+
 
 
 
