@@ -20,7 +20,14 @@
 
 
 $(document).ready(function() {
-  $("a.fancybox").fancybox();
+	$("a.fancybox").fancybox({
+		padding : 0,
+	    helpers: {
+	        overlay: {
+	            locked: false
+	        }
+	    }
+	});
 });
 
 $(document).ready(function() {
@@ -28,6 +35,11 @@ $(document).ready(function() {
 		type: 'image',
 		openEffect	: 'none',
 		closeEffect	: 'none',
-
+		padding : 0,
+	    helpers: {
+	        overlay: {
+	            locked: false
+	        }
+	    }
 	});
 });

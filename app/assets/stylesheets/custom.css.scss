@@ -337,7 +337,6 @@ hr {
 	width: 520px;
 	height: 380px;
 	padding-top: 30px;
-	overflow-x: hidden;
 }
 
 h1 {
@@ -424,4 +423,8 @@ h1 {
 
 .navbar .navbar-collapse {
     text-align: center;
+}
+
+.grouped_elements{
+	margin: 10px;
 }
