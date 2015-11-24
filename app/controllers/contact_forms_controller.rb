@@ -8,6 +8,7 @@ class ContactFormsController < ApplicationController
 	@contact_form = ContactForm.new contact_form_params
 	@contact_form.save
 	redirect_to root_path
+	AdminMailer.notification(@contact_form).deliver_now
  end
 
  def destroy
