@@ -17,22 +17,22 @@
                             <a href="#page-top"></a>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "О нас",        		'#about_us' %>
+                            <%= link_to t('navbar.about_company'), '#about_us' %>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "Почему мы", 			'#why_we_are' %>
+                            <%= link_to t('navbar.why_we_are'), 			'#why_we_are' %>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "Цены", 	            '#prices' %>
+                            <%= link_to t('navbar.prices'), 	            '#prices' %>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "Как мы работаем", 		'#how_we_work' %>
+                            <%= link_to t('navbar.how_we_work'), 		'#how_we_work' %>
                         </li>
                         <li class="page-scroll">
-                            <%= link_to "Применение",           '#applying' %>
+                            <%= link_to t('navbar.applying'),           '#applying' %>
                         </li>
                        <li class="page-scroll">
-                            <%= link_to "Контакты",             '#contact_form' %>
+                            <%= link_to t('navbar.contact_form'),             '#contact_form' %>
                         </li>
                     </ul>
                 </div>
@@ -46,6 +46,11 @@
     <div class="all-banners-width">
 
             <div class="col-xs-1 col-sm-1 col-md-2 col-lg-2">
+                        <% if I18n.locale == I18n.default_locale %>
+                          <%= link_to "English", :locale=>'en'%>
+                        <% else %>
+                          <%= link_to "Russian", :locale=>'ru'%>
+                        <%end%>
             </div>
             <div class="col-xs-3 col-sm-3 col-md-4 col-lg-5">
                 <%= image_tag "logo.png", class: "img-responsive col-md-7 logo" %>
@@ -58,7 +63,7 @@
                 </div>
                 <div class="row">
                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-12 header-paddings">
-                        <a class="btn btn-success button-contact-form button-contact-form-phone button-get-price fancybox button-contact-form-small" href="#hello" id="get-price"  role="button">Заказать звонок</a>
+                        <a class="btn btn-success button-contact-form button-contact-form-phone button-get-price fancybox button-contact-form-small" href="#hello" id="get-price"  role="button"><%= t('callback.give_number') %></a>
                     </div>
                     <%= render 'popup_contact_form/new' %>
                 </div>
@@ -66,15 +71,3 @@
             <figure class="header">
             </figure>
     </div>
-
-
-
-    <!--
-        <div class="all-banners-width">
-            <%= image_tag "logo.png", class: "img-responsive col-5" %>
-            <a class="btn btn-success button-contact-form button-contact-form-phone button-get-price fancybox col-md-3 col-lg-3" href="#hello" id="get-price" role="button">Заказать звонок</a>
-            <figure class="header">
-            </figure>
-            <%= render 'popup_contact_form/new' %>
-    </div>
-    -->

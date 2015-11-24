@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :descriptions
   resources :pictures
 
-  
+  scope "(:locale)", :locale => /en|ru/ do 
   root 'static_pages#home'
   match '/',        to: 'static_pages#home',       via: 'post'
   match '/manager', to: 'static_pages#manager',    via: 'get'
@@ -18,9 +18,7 @@ Rails.application.routes.draw do
   match '/signout', to: 'sessions#destroy',        via: 'delete'
   match '/manager', to: 'static_pages#manager',    via: 'edit'
   match '/manager', to: 'static_pages#manager',    via: 'update'
-
-  
-
+end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

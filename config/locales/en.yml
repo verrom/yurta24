@@ -20,4 +20,34 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+ navbar:
+  about_company: "About us"
+  why_we_are: "Why we are"
+  prices: "Prices"
+  how_we_work: "How do we work"
+  applying: "Applying"
+  contact_form: "Contact us"
+ callback:
+  give_number: "Call me back"
+ why_our_yurtas:
+  title: "Why our yurtas?"
+  fast_compile: "Fast to compile"
+  moisture_safe: "Safe from moisture"
+  guarantee: "Guarantee during 1 year"
+  natural_materials: "Made from natural materials"
+  hand_made: "Hand made"
+  delivery: "Delivery in different countries"
+  vapor_permeability: "Yurtas are vapor permeability"
+ how_to_buy:
+  title: "5 easy steps to buy"
+  make_a_bid: "Make a bid"
+  specification: "Specification"
+  payment: "Payment"
+  order_preparing: "Order preparing"
+  delivery: "Delivery"
+ contact_form:
+  title: "Have any questions? Write us!"
+  name: "Your name"
+  email: "Email"
+  phone: "Phone"
+  message: "Your message"

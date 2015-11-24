@@ -1,0 +1,32 @@
+ru:
+ navbar:
+  about_company: "О нас"
+  why_we_are: "Почему мы"
+  prices: "Цены"
+  how_we_work: "Как мы работаем"
+  applying: "Применение"
+  contact_form: "Контакты"
+ callback:
+  give_number: "Заказать звонок"
+ why_our_yurtas:
+  title: "Почему наши юрты?"
+  fast_compile: "Юрта собирается за 3 часа"
+  moisture_safe: "Юрты не пропускают влагу"
+  guarantee: "Гарантия 1 год"
+  natural_materials: "Юрты изготовлены из натуральных материалов"
+  hand_made: "100% ручная работа"
+  delivery: "Доставка по России и СНГ"
+  vapor_permeability: "Юрты паропроницаемы"
+ how_to_buy:
+  title: "5 простых шагов покупки"
+  make_a_bid: "Оставляете заявку или звоните сами"
+  specification: "Уточнение деталей, комплектации. РАСЧЕТ"
+  payment: "Заключение договора и оплата 60%"
+  order_preparing: "Подготовка заказа. 1-3 недели"
+  delivery: "Доставка в любой город России"
+ contact_form:
+  title: "Остались вопросы? Напишите нам!"
+  name: "Ваше имя"
+  email: "Email"
+  phone: "Телефон"
+  message: "Введите Ваше сообщение"
