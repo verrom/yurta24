@@ -91,4 +91,11 @@ namespace :deploy do
       execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
     end
   end
+
+  desc 'Create symlink to production.rb'
+  task :config_symlink do
+    on roles(:app) do
+      execute "ln -nfs #{shared_path}/config/environments/production.rb #{release_path}/config/environments/production.rb"
+    end
+  end
 end

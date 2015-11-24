@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :popup_contact_forms
-  resources :contact_forms, only: [:new, :create, :destroy]
+  resources :contact_forms
   resources :items
   resources :articles
   resources :descriptions
