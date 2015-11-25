@@ -304,7 +304,7 @@ body {
 }
 	
 #button-contact-form:hover {
-	background: black;	
+	background: #799819;	
 }
 
 .border {
@@ -375,6 +375,7 @@ h1 {
 .white-text {
 	color: white;
 	font-weight: 600;
+	font-size: 12pt;
 }
 
 @media screen and (max-width: 1100px) {
@@ -405,10 +406,6 @@ h1 {
 
 .margin-bottom-for-applience {
 	margin-bottom: 40px;
-}
-
-.navbar-header {
-	color: red;
 }
 
 .navbar-default .navbar-nav > li > a {

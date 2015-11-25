@@ -48,6 +48,22 @@ en:
  contact_form:
   title: "Have any questions? Write us!"
   name: "Your name"
-  email: "Email"
   phone: "Phone"
   message: "Your message"
+  button: "Write us!"
+ contacts:
+  our_address: "Our address"
+  city: "Krasnoyarsk"
+  street: "Bashilovskaya street, 3, office 111"
+  phone: "Phone"
+  email: "Email"
+  vkontakte_link: "Our page in Vkontakte"
+  facebook_link: "Our page in Facebook"
+ photogallery:
+  title: "Photogallery"
+ copyright:
+  company_name: "Yurtas of the Siberia"
+ get_price:
+  button: "Get price!"
+ language:
+  name: "English | Переключиться на русский"

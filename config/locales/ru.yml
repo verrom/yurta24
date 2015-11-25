@@ -27,6 +27,22 @@ ru:
  contact_form:
   title: "Остались вопросы? Напишите нам!"
   name: "Ваше имя"
-  email: "Email"
   phone: "Телефон"
   message: "Введите Ваше сообщение"
+  button: "Написать нам"
+ contacts:
+  our_address: "Наш адрес"
+  city: "Красноярск"
+  street: "ул. Башиловская, д. 3, оф. 111"
+  phone: "Телефон"
+  email: "Электронная почта"
+  vkontakte_link: "Мы в контакте"
+  facebook_link: "Мы в Facebook"
+ photogallery:
+  title: "Фотогалерея"
+ copyright:
+  company_name: "Юрты Сибири"
+ get_price:
+  button: "Получить прайс!"
+ language:
+  name: "Русский | Change to English"
