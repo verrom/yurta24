@@ -5,7 +5,7 @@ class CreateTranslationForItems < ActiveRecord::Migration
     end
 	Item.create_translation_table! :item_name => :string,
       :variable1 => :string, :variable2 => :string, :variable3 => :string, :variable4 => :string, 
-      :value1 => :string, :value2 => :string, :value3 => :string, :value4 => :string, :comment => :string  
+      :value1 => :string, :value2 => :string, :value3 => :string, :value4 => :string, :comment => :string
   end
   
   def down

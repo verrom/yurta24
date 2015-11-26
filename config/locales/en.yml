@@ -27,6 +27,7 @@ en:
   how_we_work: "How do we work"
   applying: "Applying"
   contact_form: "Contact us"
+  photos: "Photo"
  callback:
   give_number: "Call me back"
  why_our_yurtas:
@@ -67,3 +68,8 @@ en:
   button: "Get price!"
  language:
   name: "English | Переключиться на русский"
+ item:
+  edit: "Карточка редактирования товара (EN)"
+  new: "Добавление товара (EN)"
+ article:
+  edit: "Редактирование блока (EN)"

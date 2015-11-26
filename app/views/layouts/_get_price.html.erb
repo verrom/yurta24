@@ -1,6 +1,11 @@
 <div class="container">
-	<div class="row center-block">	
+	<div class="row center-block">
+	<% if I18n.locale == I18n.default_locale %>	
 		<a type="button" id="get-price" class="btn btn-success button-get-price" 
-                    href="<%= asset_path('price.pdf') %>" download="price.pdf"><%= t('get_price.button') %></a> 
+                    href="<%= asset_path('price.pdf') %>" download="price.pdf"><%= t('get_price.button') %></a>
+    <%else%>
+    <a type="button" id="get-price" class="btn btn-success button-get-price" 
+                    href="<%= asset_path('price_en.pdf') %>" download="price_en.pdf"><%= t('get_price.button') %></a> 
+	<%end%> 
 	</div>	
 </div>

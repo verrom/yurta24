@@ -6,6 +6,7 @@ ru:
   how_we_work: "Как мы работаем"
   applying: "Применение"
   contact_form: "Контакты"
+  photos: "Фото"
  callback:
   give_number: "Заказать звонок"
  why_our_yurtas:
@@ -46,3 +47,10 @@ ru:
   button: "Получить прайс!"
  language:
   name: "Русский | Change to English"
+ price:
+  get: "<%= asset_path('price.pdf') %>"
+ item:
+  edit: "Карточка редактирования товара"
+  new: "Добавление товара"
+ article:
+  edit: "Редактирование блока"
