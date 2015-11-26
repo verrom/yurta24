@@ -2,10 +2,10 @@
 # config valid only for Capistrano 3
 lock '3.4.0'
 
-require 'net/ssh/proxy/http'
+#require 'net/ssh/proxy/http'
 
-sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
-set :ssh_options, { :proxy => sshproxy }
+#sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
+#set :ssh_options, { :proxy => sshproxy }
 # Project configuration options
 # ------------------------------
 
@@ -89,6 +89,13 @@ namespace :deploy do
   task :config_symlink do
     on roles(:app) do
       execute "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
+    end
+  end
+
+  desc 'Create symlink to production.rb'
+  task :config_symlink do
+    on roles(:app) do
+      execute "ln -nfs #{shared_path}/config/environments/production.rb #{release_path}/config/environments/production.rb"
     end
   end
 end

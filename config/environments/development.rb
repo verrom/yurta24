@@ -19,16 +19,16 @@ sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.perform_deliveries = true
-  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
     address:              'smtp.locum.ru',
-    port:                 '2525',
+    port:                 '25',
     domain:               'locum.ru',
-    user_name:            'xxxxx@example.com',
-    password:             'xxxxxxxxxxxxxx',
+    user_name:            'xxxxxxxxxxx',
+    password:             'xxxxxxxx',
     authentication:       'login',
+    openssl_verify_mode: 'none',
     enable_starttls_auto: true  
   }
   # Print deprecation notices to the Rails logger.
