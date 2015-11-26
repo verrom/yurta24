@@ -1,5 +1,14 @@
 <% if signed_in? %>
-	<h1>Административный раздел  &nbsp<%= link_to "Выйти", signout_path, class: "btn btn-large btn-primary", method: "delete" %>&nbsp&nbsp<%= link_to "Главная", root_path, class: "btn btn-large btn-primary" %></h1>
+	<h1>Административный раздел  &nbsp<%= link_to "Выйти", signout_path, class: "btn btn-large btn-primary", method: "delete" %>&nbsp&nbsp<%= link_to "Главная", root_path, class: "btn btn-large btn-primary" %>
+	            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                <div class="btn btn-success button-contact-form button-get-price" id="get-price">
+                        <% if I18n.locale == I18n.default_locale %>
+                          <%= link_to "RU | en", :locale => 'en' %>
+                        <% else %>
+                          <%= link_to "ru | EN", :locale =>'ru' %>
+                        <%end%>
+                </div>
+            </div></h1>
 	<div class="container">
 		<%= render 'contact_forms/show' %>
 		<%= render 'popup_contact_form/show' %>

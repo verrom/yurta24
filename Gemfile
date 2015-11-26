@@ -34,7 +34,7 @@ gem 'will_paginate', '3.0.7'
 gem 'execjs', '2.6.0'
 gem 'therubyracer', '0.12.2', :platforms => :ruby
 gem 'tinymce-rails'
-
+gem 'globalize', '~> 5.0.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
