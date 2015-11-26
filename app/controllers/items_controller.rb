@@ -10,8 +10,14 @@ class ItemsController < ApplicationController
 
     def create
        @item = Item.new item_params
-       @item.save
-       redirect_to manager_path
+       if @item.save
+        flash[:success] = "Товар успешно добавлен!"
+        redirect_to manager_path
+       else
+        flash[:error] = "Что-то пошло не так... Возможно, Вы не добавили фотографию?"
+        redirect_to manager_path
+       end
+       
     end
 
     def update
@@ -26,8 +32,13 @@ class ItemsController < ApplicationController
 
     def destroy
  		 @item = Item.find(params[:id])
- 		 @item.destroy
+ 		 if @item.destroy
+      flash[:success] = "Товар успешно Удален!"
      redirect_to manager_path
+     else
+      flash[:error] = "Что-то пошло не так..."
+      redirect_to manager_path
+     end
  	  end
 
     private

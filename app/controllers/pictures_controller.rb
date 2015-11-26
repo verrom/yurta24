@@ -9,8 +9,13 @@ class PicturesController < ApplicationController
 
     def create
        @picture = Picture.new picture_params
-       @picture.save
-       redirect_to manager_path
+       if @picture.save
+          redirect_to manager_path
+          flash[:success] = "Фотогалерея успешно обновлена!"
+       else
+        flash[:error] = "Что-то пошло не так... Возможно, Вы не добавили фотографию?"
+        redirect_to manager_path
+       end
     end
 
     def update
@@ -25,8 +30,13 @@ class PicturesController < ApplicationController
 
     def destroy
  		@picture = Picture.find(params[:id])
- 		@picture.destroy
+ 		if @picture.destroy
+      flash[:success] = "Фотография успешно удалена."
      	redirect_to manager_path
+    else
+        flash[:error] = "Что-то пошло не так..."
+        redirect_to manager_path
+    end
  	end
 
     private

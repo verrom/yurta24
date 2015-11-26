@@ -7,10 +7,11 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       sign_in user
       redirect_to manager_path
+      flash[:success] = 'Добро пожаловать!'
       # Sign the user in and redirect to the user's show page.
     else
-      flash.now[:error] = 'Invalid email/password combination'
-      render 'new'
+      flash[:error] = 'Неправильный пароль либо логин. Попробуйте еще раз.'
+      redirect_to signin_path
     end
   end
 
