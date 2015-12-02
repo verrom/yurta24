@@ -9,6 +9,9 @@ ru:
   photos: "Фото"
  callback:
   give_number: "Заказать звонок"
+  name: "Ваше имя"
+  phone: "Телефон"
+  button: "Перезвоните мне"
  why_our_yurtas:
   title: "Почему наши юрты?"
   fast_compile: "Юрта собирается за 3 часа"
