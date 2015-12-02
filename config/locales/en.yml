@@ -22,7 +22,7 @@
 en:
  navbar:
   about_company: "About us"
-  why_we_are: "Why we are"
+  why_we_are: "Why we"
   prices: "Prices"
   how_we_work: "How do we work"
   applying: "Applications"
@@ -54,7 +54,7 @@ en:
   name: "Your name"
   phone: "Telephone number"
   message: "Your message"
-  button: "Send"
+  button: "Request a call back"
  contacts:
   our_address: "Our address"
   city: "Krasnoyarsk"
