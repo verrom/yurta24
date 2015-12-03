@@ -25,8 +25,8 @@ sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
     address:              'smtp.locum.ru',
     port:                 '25',
     domain:               'locum.ru',
-    user_name:            'xxxxxxxxxxx',
-    password:             'xxxxxxxx',
+    user_name:            'info@yurta24.ru',
+    password:             'sdkjnNfjb238!',
     authentication:       'login',
     openssl_verify_mode: 'none',
     enable_starttls_auto: true  

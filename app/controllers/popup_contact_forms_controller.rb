@@ -1,4 +1,5 @@
 class PopupContactFormsController < ApplicationController
+  
   def new
   	@popup_contact_form = PopupContactForm.new
   end
