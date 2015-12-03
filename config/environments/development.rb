@@ -22,11 +22,11 @@ sshproxy = Net::SSH::Proxy::HTTP.new('172.23.9.252', 8080)
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address:              'smtp.locum.ru',
-    port:                 '25',
+    address:              'xxxxxxxx',
+    port:                 'xxxxxxxx',
     domain:               'locum.ru',
-    user_name:            'info@yurta24.ru',
-    password:             'sdkjnNfjb238!',
+    user_name:            'xxxxxxxx',
+    password:             'xxxxxxxx',
     authentication:       'login',
     openssl_verify_mode: 'none',
     enable_starttls_auto: true  
