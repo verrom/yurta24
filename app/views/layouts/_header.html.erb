@@ -45,16 +45,6 @@
     </nav>
 
     <div class="all-banners-width">
-            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                <div class="btn btn-success button-contact-form button-get-price" id="get-price">
-                        <% if I18n.locale == I18n.default_locale %>
-                          <%= link_to "RU | en", :locale => 'en' %>
-                        <% else %>
-                          <%= link_to "ru | EN", :locale =>'ru' %>
-                        <%end%>
-                </div>
-            </div>
-
             <div class="col-xs-3 col-sm-3 col-md-4 col-lg-5">
                 <%= image_tag "logo.png", class: "img-responsive col-md-7 logo" %>
             </div>
@@ -71,6 +61,18 @@
                    <%= render 'popup_contact_form/new' %>
                 </div>
             </div>
+
+            <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2 locale button-contact-form-small">
+                <div class="row">
+                        <div class="btn btn-success button-contact-form button-get-price" id="get-price">
+                          <%= link_to "en", :locale => 'en' %>
+                        </div>
+                        <div class="btn btn-success button-contact-form button-get-price" id="get-price">
+                          <%= link_to "ru", :locale =>'ru' %>
+                        </div>
+                </div>
+            </div>
+ 
             <figure class="header">
             </figure>
     </div>
