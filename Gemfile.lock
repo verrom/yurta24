@@ -251,3 +251,9 @@ DEPENDENCIES
   unicorn
   web-console (= 2.2.1)
   will_paginate (= 3.0.7)
+
+RUBY VERSION
+   ruby 2.1.5p273
+
+BUNDLED WITH
+   1.13.7
